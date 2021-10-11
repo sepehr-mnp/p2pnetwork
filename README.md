@@ -14,4 +14,7 @@ you might ask, how can p2p network simulator be created on one pc? how many ips 
 well... i know this early version has some hard things to do and its not completely automatic but im gonna create another script to automatically generate first 3 nodes and create as many as you want. so now that there is no automatic generator, listen(read) carefully:<br>
 1- **create first three nodes:** only copy program folder 2 times and then edit port number in *inf.py*(in the image, 5051), use sth in order i suggest and fo rthis version, use 5052 and 5053, its easier to work with.<br>
 <img width="100%" src="https://github.com/sepehr-mnp/p2pnetwork/blob/main/p2p01.png"><br>
-2-
+ but because i love you gus so much, i made it easier for you so you only need to replace the contents form th "put setup" folder with your existing files.<br>
+ 2-**run nodes:** just click on server.py on each node folder<br>
+ 3-**add nodes:** -copy the master folder and use edit the *inf.py* script to use another port<br> -then open *finder.py*<br>
+the program will at first try to connect to hard coded ports(5051,5052,5053) and after that, it will try to ask them to give a random node port(for the first additional three nodes, program will have near 300 requests! dont worry :) )
