@@ -25,3 +25,22 @@ __!note!__ if you want to check on connected nodes and see if they still working
  
  just edit the *server.py* code and use functions based on your input which is in the *msg*<br>
  <img width="100%" src="https://github.com/sepehr-mnp/p2pnetwork/blob/main/p2p02.png"><br>
+ 
+# useful functions
+ - **sender:**<br>
+   sender.send(port,message) //sends  message to the port given <br>
+   sender.sendall(message)   //sends  message to all the connected nodes<br>
+   sender.pingpong(port)     // does a ping pong with the port given<br>
+   sender.sendmsg(port,message) //sends  message to the port given but ask them first weather they have the message or not<br>
+   sender.sendallmsg(message) //sends  message to all the connected nodes but ask them first weather they have the message or not<br>
+   sender.fileask(port,filename) //sends a message to network to ask if anyone has a file with the filename given <br>
+   sender.sendfile(filename,port) //sends  message to the port given but ask them first weather they have the message or not<br>
+- **messageadder:**<br>
+  messageadder.add(message,port) // add message if it doesnt exist already<br>
+  messageadder.add2(filename,port) // add file if it doesnt exist already<br>
+  messageadder.exchecker(message,port) // checks if the already message exist if it doesnt return 0 if it does return 1 if it does and its from the port given, return 2(this can be used to punish spammer)<br>
+    messageadder.exchecker2(filename,port) // checks if a file already exist if it doesnt return 0 if it does return 1 if it does and its from the port given, return 2(this can be used to punish spammer)<br>
+  messageadder.excheckerhsh(hsh(message),port) // same as exchecker but checks it by using the last 8 characters of the SHA256 hash of the saved message<br>
+  messageadder.excheckerhsh2(hsh(filename),port) // same as exchecker but checks it by using the last 8 characters of the SHA256 hash of the saved filename<br>
+ 
+   
